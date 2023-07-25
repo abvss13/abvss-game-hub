@@ -1,0 +1,255 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Global styles */
+
+:root{
+    --bg: #121B2D;
+    --header-bg: #121829;
+    --btn: #8F00FF;
+    --btn-text: #FFFFFF;
+    --btn-hover:#5F00AA;
+    --h1: #FFFFFF;
+    --h2: #EBEEF5;
+    --h3: #986AE2;
+    --text: #8E95A9;
+    --link: #9C92F8;
+    --link-hover: #C850F2;
+    --select: #323B54;
+}
+
+body{
+    background: var(--header-bg);
+}
+
+body::-webkit-scrollbar{
+    width: 10px;
+} 
+
+body::-webkit-scrollbar-track{
+    background: #121823;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #11243B;  
+    border-radius: 20px;     
+}
+
+a{
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:visited{
+    color: var(--link);
+}
+
+a:hover{
+    color: var(--link-hover);
+}
+
+.pointer:hover{
+    cursor: pointer;
+}
+
+.container
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header section styles */
+.header{
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--header-bg);
+    margin: 0 auto;
+    z-index: 10;
+}
+
+.header__container{
+    margin: 20px 0px 20px;
+}
+
+.header__menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.header__search{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px 8px;
+    gap: 16px;
+    color: var(--h1);
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--select);
+    border-radius: 12px;
+}
+
+.header__filter-platform {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px 8px;
+    gap: 16px;
+    color: var(--h1);
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--select);
+    border-radius: 12px;
+}
+
+.header__platform{
+    color: var(--header-bg);
+}
+
+/* Main section with game cards */
+
+.games{
+    background: url(./img/Background.png);
+    background-color: var(--bg);
+    background-repeat: no-repeat;
+}
+
+.games__preloader{
+    display: flex;
+}
+
+.games__container{
+    justify-content: center;
+}
+
+.games__about{
+    display: flex;
+    gap: 200px;
+    margin: 0px 0px 40px;
+    overflow:hidden;
+}
+
+.games__title-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+    gap: 25px;
+}
+
+.games__title{
+    color: var(--h1);
+}
+
+.games__sub-title{
+    color: var(--h2);
+    max-width: 500px;
+}
+
+.games__api-details{
+    color: var(--text);
+}
+
+.games__img{
+    float:right;
+    height:auto;
+}
+
+/* Games cards styles that are being used in JS file */
+
+.gamges__card-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 1200px;
+    margin: 0px 0px 60px;
+}
+
+.games__card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 350px;
+    gap: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+    border-radius:10px;
+    padding: 10px 10px;
+    background: rgba(32, 40, 62, 0.8);
+    backdrop-filter: blur(80px);
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.05));
+}
+
+.games__card-img{
+    border-radius: 10px;
+}
+
+.games__details-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.games__name{
+    color: var(--h2);
+}
+
+.games__genre{
+    color: var(--h3);
+}
+
+.games__platform{
+    color: var(--h3);
+}
+
+.games__description{
+    color: var(--text);
+    height: 150px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.games__url{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Pagination styles */
+
+.games__pag{
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0px 0px 60px;
+    
+}
+
+.games__pag-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    font-weight: 600;
+    background: var(--btn);
+    color: var(--btn-text);
+    box-shadow: 0px 0px 4px 1px rgba(0, 194, 255, 0.25);
+}
+
+.games__pag-page:hover{
+    background: var(--btn-hover);
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Free to Play Games Library</title>
+</head>
+<body>
+<!-- Header section -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="./index.html" class="header__logo-url"><img src="img/app-logo.svg" alt="Free Games Library Logo" class="header__logo pointer"></a>
+            <div class="header__menu">
+                <select name="Platform" id="" class="header__filter-platform pointer">
+                    <option class="header__platform"value="all" id="1">All</option>
+                    <option class="header__platform" value="pc" id="2">PC</option>
+                    <option class="header__platform" value="browser" id="3">Browser</option>
+                </select>
+            </div>
+        </div>
+    </header>
+<!-- Main section containing 'About' and 'Game cards' -->
+    <main class="games">
+        <div class="container games__container">
+            <div class="games__about">
+                <div class="games__title-box">
+                    <h1 class="games__title">Discover all available F2P games</h1>
+                    <h2 class="games__sub-title">You can browse all of the existing free to play games from different publishers across the globe.</h2>
+                    <p class="games__api-details">Free Games Library is powered by an Open-Source <br> <a href="https://rapidapi.com/digiwalls/api/free-to-play-games-database/" target="_blank" class="games__api-link">Free-to-Play Games Database API</a></p>
+                </div>
+                <img src="img/about.png" width="350px" alt="" class="games__img">
+            </div>
+            <div class="gamges__card-box"></div>
+            <ul class="games__pag"></ul>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
